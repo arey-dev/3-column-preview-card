@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  /* card bg */
+  --primary-clr-orange: hsl(31, 77%, 52%);
+  --primary-clr-cyan: hsl(184, 100%, 22%);
+  --primary-clr-cyan-dark: hsl(179, 100%, 13%);
+
+  /* neutral */
+  --neutral-white: hsla(0, 0%, 100%, 0.75);
+  --neutral-gray: hsl(0, 0%, 95%);
+
+  /* font */
+}
+
+/* global styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+main {
+  background-color: var(--neutral-gray);
+  max-width: 1440px;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 864px;
+  border-radius: 0.5em;
+}
+
+.card {
+  padding: 2.5em;
+}
+
+.card__name {
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  color: var(--neutral-gray);
+  margin: 0.625em 0;
+}
+
+.card__text {
+  color: var(--neutral-white);
+  margin-bottom: 6em;
+}
+
+a {
+  display: inline-block;
+  background: var(--neutral-gray);
+  padding: 0.625em 2em;
+  border: 0.188em solid var(--neutral-white);
+  border-radius: 2em;
+  margin-bottom: 0.5em;
+  transition: all 0.15s;
+}
+
+.card--orange {
+  background: var(--primary-clr-orange);
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+
+.card--cyan {
+  background: var(--primary-clr-cyan);
+}
+
+.card--cyan-dark {
+  background: var(--primary-clr-cyan-dark);
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
+.card__btn--orange {
+  color: var(--primary-clr-orange);
+}
+
+.card__btn--cyan {
+  color: var(--primary-clr-cyan);
+}
+
+.card__btn--cyan-dark {
+  color: var(--primary-clr-cyan-dark);
+}
+
+
+a:hover {
+  color: var(--neutral-white);
+  background: none;
+}
+
+@media (max-width:40em) {
+  .container {
+    width: 20em;
+    margin: 4em 0;
+    flex-direction: column;
+  }
+
+  .card--orange {
+    border-top-right-radius: 0.5em;
+    border-bottom-left-radius: 0;
+  }
+
+  .card--cyan-dark {
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+  }
+
+  .card__text {
+    margin-bottom: 2em;
+  }
+}

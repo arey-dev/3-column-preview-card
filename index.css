@@ -103,9 +103,9 @@ a:hover {
   background: none;
 }
 
-@media (max-width:40em) {
+@media (max-width:60em) {
   .container {
-    width: 20em;
+    width: 80%;
     margin: 4em 0;
     flex-direction: column;
   }
